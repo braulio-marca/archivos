@@ -54,7 +54,7 @@ ROOT_URLCONF = "prueba1.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['C:/Users/JesusM/Desktop/ciclo 2022-2/repo1/django/backend/prueba1/prueba1/template'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

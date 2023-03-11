@@ -7,17 +7,33 @@
     <title>pagina1</title>
 </head>
 <body>
+    {% include 'superior/barra.html' %}
+
+    <h2>
+        {% if nombre == 'pero' %}
+            <h1>hola perro</h1>
+        {% else %}
+            <h1>hola {{nombre}}</h1>
+        {% endif %}
+    </h2>
     <h1>
         hola amiguitos como estan {{nombre}} ,su apelldio es {{apellido}} el dia es {{dia.day}} de {{dia.month}} del {{dia.year}}
     </h1>
         <ul>
             {% if temas %}
                 {% for i in temas %}
-                    <li>{{i}}</li>
+                    <li>{{i|first|lower}}</li>
                 {% endfor %}
             {% else %}
                 <li>no hay temas</li>
             {% endif %}
         </ul>
+    <p>
+        {%if apelliedo == 'vaso' %}
+            <strong>hola vaso</strong>
+        {% else %}
+            <strong>hola {{apellido}}</strong>
+        {% endif %}
+    </p>
 </body>
 </html>
